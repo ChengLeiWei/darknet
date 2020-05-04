@@ -46,10 +46,10 @@ def get_classes_and_index(path):
     return D
 
 
-dataDir = '/mnt/large4t/pengchong_data/Data/COCO'  # COCO数据集所在的路径
+dataDir = '.cocodata'  # COCO数据集所在的路径
 dataType = 'train2014'  # 要转换的COCO数据集的子集名
 annFile = '%s/annotations/instances_%s.json' % (dataDir, dataType)  # COCO数据集的标注文件路径
-classes = get_classes_and_index('/mnt/large4t/pengchong_data/Tools/Yolo_paul/darknet/data/coco_list.txt')
+classes = get_classes_and_index('./coco41_list.txt')
 
 # labels 目录若不存在，创建labels目录。若存在，则清空目录
 if not os.path.exists('%s/%s/labels/' % (dataDir, dataType)):
